@@ -1,0 +1,22 @@
+/* bug.css */
+.element {
+  width: calc(50% - 100px);
+  /* If 50% is less than 100px, this will result in a negative width */
+}
+
+/* bugSolution.css */
+.element {
+  width: calc(max(0, 50% - 100px));
+  /* Using max(0, calculation) ensures the width never becomes negative */
+}
+
+/* Alternative solution: use a conditional statement in preprocessor language like Sass or Less */
+/*
+@mixin responsive-width($percentage, $pixels) {
+  @if ($percentage - $pixels > 0) {
+    width: calc(#{$percentage} - #{$pixels});
+  } @else {
+    width: 0; /* Or some other default value */
+  }
+}
+*/
