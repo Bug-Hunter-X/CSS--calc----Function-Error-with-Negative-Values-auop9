@@ -1,0 +1,1 @@
+The CSS property `calc()` is used to perform calculations. However, there is a subtle error that can occur when using the `calc()` function with percentages and other units. If the calculation results in a negative value, the browser might not render the property correctly. This can lead to unexpected visual results, such as elements disappearing or overlapping incorrectly.
